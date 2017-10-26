@@ -1,0 +1,139 @@
+.backgroundchange{
+  background: #111;
+  list-style: none;
+  position: relative;
+  transition: all 1s linear;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  padding: 0;margin: 0;
+}
+.backgroundchange li{
+  position: absolute;
+  opacity: 0;
+  top:0;left:0;
+}
+
+@media (max-width:767px) {
+  li.firstLi{
+    animation: firestLiAn1 20s infinite;
+    animation-timing-function: linear;
+  }
+  li.nextLi{
+    animation: nextLiAn1 20s infinite;
+    animation-timing-function: linear;
+  }
+  .headerMessage{
+    opacity:1;
+    color:#fff;
+    font-size: 16px;
+    font-family: "黑体";
+  }
+  .centerButtons{
+    position: absolute;
+    width: 75%;
+    max-width: 600px;
+    padding: 20px 10px;
+    top:50%;left:50%;
+    transform: translateX(-50%) translateY(-75%);
+    background: rgba(255, 122, 11, 0.8);
+    border:10px dotted rgba(0,0,0,0.8);
+    border-radius: 10px;
+    color: #27ef0c;
+    font-size:18px;
+    font-family: "Microsoft JhengHei";
+    font-weight: 800;
+  }
+}
+@media (min-width:768px) {
+  li.firstLi{
+    animation: firestLiAn2 40s infinite;
+    animation-timing-function: linear;
+  }
+  li.nextLi{
+    animation: nextLiAn2 40s infinite;
+    animation-timing-function: linear;
+  }
+  .headerMessage{
+    opacity:1;
+    color:#fff;
+    font-size: 30px;
+    font-family: "黑体";
+  }
+  .centerButtons{
+    position: absolute;
+    width: 50%;
+    max-width: 600px;
+    padding: 20px 10px;
+    top:50%;left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: rgba(255, 122, 11, 0.8);
+    border:10px dotted rgba(0,0,0,0.8);
+    border-radius: 10px;
+    color: #27ef0c;
+    font-size:18px;
+    font-family: "Microsoft JhengHei";
+    font-weight: 800;
+  }
+}
+.centerButtons a{
+  color:#111111;
+}
+.centerButtons a:hover{
+  color: #2a78ef;
+}
+.centerButtons div{
+  margin-top: 10px;
+}
+.nanguaList{
+  width: 100%;
+  max-height: 80%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.nanguaList p{
+  width: 100%;
+
+}
+
+@keyframes firestLiAn1 {
+  0%{opacity: 0;left:0  }
+  12.5%{opacity:1;left:-50%;  }
+  25%{opacity:0;left:-100%;  }
+  37.5%{opacity:1;left:-150%;  }
+  50%{opacity:0;left:-200%;}
+  51%{  opacity:0;left:0;}
+  100%{   opacity:0;left:0;}
+}
+@keyframes nextLiAn1 {
+  0%{opacity: 0;left:0  }
+  50%{opacity:0;left:0;}
+  62.5%{opacity:1;left:-50%;}
+  75%{opacity:0;left:-100%;}
+  87.5%{opacity:1;left:-150%;}
+  100%{opacity:0;left:-200%;}
+}
+
+@keyframes firestLiAn2 {
+  0%{opacity: 0;left:25%  }
+  15%{opacity:1;}
+  25%{opacity:1;left:-37.5%;}
+  35%{opacity:1;}
+  50%{opacity:0;left:-100%;}
+  100%{opacity:0;left:-100%;}
+
+}
+@keyframes nextLiAn2 {
+  0%{opacity: 0;left:25%}
+  50%{opacity:0;left:25%;}
+  65%{opacity:1;}
+  75%{opacity:1;left:-37.5%;}
+  85%{opacity:1;}
+  100%{opacity:0;left:-100%;}
+
+}
+.headerMessage{
+  opacity:1;
+  color:#fff;
+  font-size: 20px;
+}

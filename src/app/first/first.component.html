@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid" [ngStyle]="{'height':wH+'px','padding':0,'position':'relative'}">
+  <ul class="backgroundchange">
+    <li class="firstLi">
+      <img [ngStyle]="{'height':wH+'px'}" src="./assets/image/b1.jpg"/>
+    </li>
+    <li class="nextLi">
+      <img [ngStyle]="{'height':wH+'px'}" src="./assets/image/b2.jpeg"/>
+    </li>
+    <li *ngIf="login" class="headerMessage">假面使者：{{user.username}}</li>
+  </ul>
+  <div *ngIf="!gameResult" class="centerButtons">
+    {{text}}
+    <div class="text-center">
+      <a [routerLink]="'/nangua'">进入游戏</a>
+    </div>
+    <div *ngIf="!gameOrder" class="text-center" >
+      <a (click)="showGameOrder()">游戏规则</a>
+    </div>
+    <div class="text-center">
+      <a (click)="showGameResult()">查看收获</a>
+    </div>
+  </div>
+  <div *ngIf="gameResult" class="centerButtons">
+    {{tipResult}}
+    <div *ngIf="successResult.length>0" class="nanguaList">
+      <p *ngFor="let nangua of successResult;let i=index;">[{{i}}]号南瓜重量为：{{nangua.weight}} g</p>
+    </div>
+    <div class="text-center">
+      <a (click)="hideGameResult()">返回</a>
+    </div>
+  </div>
+  </div>
